@@ -1,0 +1,133 @@
+// Modal
+// .modal-content {
+//   border: 0;
+//   border-radius: 5px;
+// }
+
+// .login-form,
+// .register-form {
+//   background-color: #fff;
+//   text-align: center !important;
+//   padding: 40px 15px;
+//   transition: 0.5s ease;
+//   .login-close__nav {
+//     width: 35px;
+//     height: 35px;
+//     line-height: 33px;
+//     text-align: center;
+//     color: #1f3755;
+//     font-size: 1.1rem;
+//     position: absolute;
+//     top: 15px;
+//     left: 15px;
+//     cursor: pointer;
+//     z-index: 3;
+//   }
+
+//   .modal-title {
+//     * {
+//       text-align: center;
+//     }
+//     p {
+//       color: #59585b !important;
+//     }
+//   }
+
+//   .form-group {
+//     margin-bottom: 1rem;
+
+//     .input-group {
+//       border-bottom: 1px solid #ced4da;
+//     }
+//     .input-group-prepend {
+//       .input-group-text {
+//         height: 100%;
+//         background-color: transparent;
+//         border: none;
+//       }
+//     }
+//     .form-control {
+//       background-color: transparent;
+//       border: none;
+//       border-radius: 0;
+//     }
+//   }
+
+//   .forget-password {
+//     color: var(--main) !important;
+//     text-align: left;
+//     font-weight: 600;
+//     text-decoration: underline;
+//   }
+// }
+.modal-body {
+  padding: 30px;
+}
+.login-form,
+.register-form {
+  .modal-title {
+    text-align: center;
+    h4 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 13px;
+      color: #7d7d7d;
+    }
+  }
+
+  .forget-password {
+    font-size: 13px;
+    color: #808080;
+    text-decoration: none;
+    text-align: right;
+    transition: 0.4s;
+    &:hover {
+      color: #fbb03b;
+    }
+  }
+  .create-account {
+    .nohave {
+      font-size: 13px;
+    }
+    .new-account {
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #000;
+      margin-left: 30px;
+    }
+  }
+
+  .form-check-input[type="checkbox"] {
+    border: 1px solid #d8d8d8;
+    width: 19px;
+    height: 19px;
+    padding: 0;
+    margin-right: 5px;
+    box-shadow: none;
+  }
+  .form-check-input:checked {
+    background-color: #fbb03b;
+  }
+  .select {
+    a {
+      text-decoration: none;
+      font-weight: 300;
+    }
+  }
+
+  .form-link {
+    display: inline-block;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.4s;
+    &:hover {
+      color: #fbb03b;
+    }
+  }
+}
+
+// Modal

@@ -1,0 +1,25 @@
+.swiper-button-prev::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 15px;
+  height: 24px;
+  background: url("../assets/chevron-left.svg") no-repeat center center;
+  background-size: cover;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.swiper-button-next::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 15px;
+  height: 24px;
+  background: url("../assets/chevron-right.svg") no-repeat center center;
+  background-size: cover;
+  transform: translateY(-50%);
+  z-index: 999;
+}
