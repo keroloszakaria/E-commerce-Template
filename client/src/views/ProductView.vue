@@ -305,7 +305,6 @@ export default {
       // }
     },
     addToCart() {
-      console.log(this.id);
       let productData = {
         id: this.id,
       };

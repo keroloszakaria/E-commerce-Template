@@ -22,19 +22,34 @@
             </p>
           </div>
           <div class="column__social">
-            <a href="#">
+            <a
+              v-if="this.personalData.facebook"
+              :href="this.personalData.facebook"
+            >
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#">
+            <a
+              v-if="this.personalData.twitter"
+              :href="this.personalData.twitter"
+            >
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="#">
+            <a
+              v-if="this.personalData.linkedin"
+              :href="this.personalData.linkedin"
+            >
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="#">
+            <a
+              v-if="this.personalData.instagram"
+              :href="this.personalData.instagram"
+            >
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="#">
+            <a
+              v-if="this.personalData.youtube"
+              :href="this.personalData.youtube"
+            >
               <i class="fab fa-youtube"></i>
             </a>
           </div>
@@ -47,19 +62,18 @@
               </div>
               <ul class="column__list">
                 <li>
-                  <a href="#">Order Status</a>
+                  <router-link to="/gift-card">Gift Cards</router-link>
                 </li>
                 <li>
-                  <a href="#">Shipping and Delivery</a>
+                  <router-link to="/return">Returns</router-link>
                 </li>
                 <li>
-                  <a href="#">Returns</a>
+                  <router-link to="/payment-options"
+                    >Payment Options</router-link
+                  >
                 </li>
                 <li>
-                  <a href="#">Payment Options</a>
-                </li>
-                <li>
-                  <a href="#">Contact Us</a>
+                  <router-link to="/shipping">Shipping</router-link>
                 </li>
               </ul>
             </div>
@@ -70,19 +84,13 @@
 
               <ul class="column__list">
                 <li>
-                  <a href="#">Gift Cards</a>
+                  <router-link to="/about">About Us</router-link>
                 </li>
                 <li>
-                  <a href="#">Find a store</a>
+                  <router-link to="/find-store">Find a store</router-link>
                 </li>
                 <li>
-                  <a href="#">Newsletter</a>
-                </li>
-                <li>
-                  <a href="#">Bacome a member</a>
-                </li>
-                <li>
-                  <a href="#">Site feedback</a>
+                  <router-link to="/contact">Contact Us</router-link>
                 </li>
               </ul>
             </div>
@@ -93,10 +101,14 @@
 
               <ul class="column__list">
                 <li>
-                  <a href="mailto:name@email.com">kz@e-ommerce.com</a>
+                  <a :href="'mailto:' + this.personalData.email">{{
+                    this.personalData.email
+                  }}</a>
                 </li>
                 <li>
-                  <a href="tel:12">+1 131 138 138</a>
+                  <a :href="'tel:' + this.personalData.telephone">{{
+                    this.personalData.telephone
+                  }}</a>
                 </li>
               </ul>
             </div>
@@ -117,7 +129,24 @@
 </template>
 
 <script>
-export default {};
+import { mapGetters, mapActions } from "vuex";
+
+export default {
+  data() {
+    return {
+      personalData: [],
+    };
+  },
+  methods: {
+    ...mapActions("personalModule", ["getPersonal"]),
+  },
+  async created() {
+    this.personalData = await this.getPersonal();
+  },
+  computed: {
+    ...mapGetters("personalModule", ["personal"]),
+  },
+};
 </script>
 
 <style lang="scss" scoped>

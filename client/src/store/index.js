@@ -3,6 +3,9 @@ import Vuex from "vuex";
 import productModule from "./Product";
 import categoriesModule from "./Categories";
 import cartModule from "./Cart";
+import personalModule from "./PersonalData";
+import GiftCardsModule from "./GiftCards";
+import StoresModule from "./Stores";
 
 Vue.use(Vuex);
 
@@ -11,6 +14,9 @@ const store = new Vuex.Store({
     productModule,
     categoriesModule,
     cartModule,
+    personalModule,
+    GiftCardsModule,
+    StoresModule,
   },
 });
 

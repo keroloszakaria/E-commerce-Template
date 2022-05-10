@@ -15,6 +15,17 @@ const routes = [
     },
   },
   {
+    path: "/about",
+    name: "About",
+    component: function () {
+      return import("../views/About.vue");
+    },
+    meta: {
+      title: "About",
+    },
+  },
+
+  {
     path: "/ProductFilter/:category",
     name: "ProductFilter",
     component: function () {
@@ -52,6 +63,68 @@ const routes = [
     },
     meta: {
       title: "Checkout",
+    },
+  },
+
+  // Footer Links
+  {
+    path: "/return",
+    name: "Return",
+    component: function () {
+      return import("../views/ReturnView.vue");
+    },
+    meta: {
+      title: "Return",
+    },
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: function () {
+      return import("../views/ContactView.vue");
+    },
+    meta: {
+      title: "Contact",
+    },
+  },
+  {
+    path: "/shipping",
+    name: "Shipping",
+    component: function () {
+      return import("../views/ShippingView.vue");
+    },
+    meta: {
+      title: "Shipping",
+    },
+  },
+  {
+    path: "/find-store",
+    name: "Store",
+    component: function () {
+      return import("../views/StoresView.vue");
+    },
+    meta: {
+      title: "Find a Store",
+    },
+  },
+  {
+    path: "/gift-card",
+    name: "GiftCard",
+    component: function () {
+      return import("../views/GiftCards.vue");
+    },
+    meta: {
+      title: "Gift Cards",
+    },
+  },
+  {
+    path: "/payment-options",
+    name: "PaymentOptions",
+    component: function () {
+      return import("../views/PaymentOptions.vue");
+    },
+    meta: {
+      title: "Payment Options",
     },
   },
   {

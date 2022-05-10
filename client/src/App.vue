@@ -269,7 +269,6 @@ export default {
     //     .then(console.log);
     // },
     toggleForm(modal) {
-      console.log(modal);
       this.currentForm = modal;
     },
   },
@@ -285,7 +284,7 @@ export default {
       
 E-commerce Template
 ------------------
->> Programmed by : Pythoners Developers
+>> Programmed by : Pythoners
 >> Information   : https://www.pythoners-eg.com`
     );
   },

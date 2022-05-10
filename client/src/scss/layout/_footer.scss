@@ -51,7 +51,7 @@ footer {
 
 .copyright {
   border-top: 1px solid var(--copyright_border);
-  padding: 25px;
+  padding: 15px;
   background-color: var(--copyright_bg);
   margin-top: 30px;
 
@@ -59,6 +59,7 @@ footer {
     margin: 0;
     color: var(--copyright_color);
     text-align: center;
+    font-size: 13px;
     a {
       text-decoration: none;
       color: var(--copyright_link);

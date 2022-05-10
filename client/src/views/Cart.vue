@@ -248,7 +248,6 @@ export default {
     this.cartList = await this.getCart();
 
     this.totalPrice();
-    // console.log(this.cartList);
   },
   components: {
     // Components

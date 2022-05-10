@@ -54,6 +54,8 @@
                       name="subcategory"
                       v-model="subcategory"
                       :id="category"
+                      :value="category"
+                      :checked="category === subcategory"
                     />
                     <label :for="category">{{ category }}</label>
                   </div>
@@ -329,7 +331,6 @@ export default {
   },
   computed: {
     ...mapGetters("categoriesModule", ["categories"]),
-
     ...mapGetters("productModule", ["product"]),
   },
 

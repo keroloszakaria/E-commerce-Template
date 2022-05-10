@@ -11,6 +11,9 @@ body {
 ul {
   list-style: none;
 }
+ul.list-styled {
+  list-style: circle;
+}
 
 .logo {
   display: flex;
@@ -72,5 +75,27 @@ ul {
       top: 50%;
       transform: translate(-50%, -50%);
     }
+  }
+}
+
+//
+//
+//
+//
+
+.section-head {
+  padding: 0 10px;
+  &__title {
+    color: #1f2123;
+    margin-bottom: 3px;
+    font-size: 36px;
+  }
+  &__description {
+    color: #72818d;
+    font-size: 14px;
+    margin: 0 0 8px;
+    border-bottom: 1px solid #edeff1;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
   }
 }

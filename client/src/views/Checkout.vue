@@ -151,9 +151,7 @@ export default {
       this.step--;
     },
   },
-  created() {
-    // console.log(this.delivery);
-  },
+  created() {},
 };
 </script>
 
@@ -219,8 +217,6 @@ main {
       }
       &__body {
         margin-bottom: 40px;
-        form {
-        }
       }
     }
     &__footer {
